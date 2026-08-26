@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05050a" />
+  <title>Eclipse Clock — Il tempo verso la prossima eclissi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="cosmic">
+  <div class="stars"></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">◐</span><span>ECLIPSE CLOCK</span></div>
+      <div class="controls">
+        <button class="theme-btn" data-theme="cosmic">Cosmic</button>
+        <button class="theme-btn" data-theme="neon">Neon</button>
+        <button class="theme-btn" data-theme="minimal">Minimal</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PROSSIMA ECLISSI</p>
+        <h1 id="nextTitle">Caricamento…</h1>
+        <p class="location" id="nextDate">—</p>
+        <div class="countdown" id="countdown">
+          <div><strong id="days">00</strong><span>giorni</span></div>
+          <div><strong id="hours">00</strong><span>ore</span></div>
+          <div><strong id="minutes">00</strong><span>min</span></div>
+          <div><strong id="seconds">00</strong><span>sec</span></div>
+        </div>
+      </div>
+      <div class="eclipse-stage" aria-label="Animazione eclissi">
+        <div class="sun-glow"></div>
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><p class="eyebrow">CALENDARIO</p><h2>Eclissi future</h2></div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">Tutte</button>
+          <button class="filter" data-filter="solar">Solari</button>
+          <button class="filter" data-filter="lunar">Lunari</button>
+        </div>
+      </div>
+      <div id="timeline" class="timeline"></div>
+      <button id="loadMore" class="load-more">Carica altri anni</button>
+    </section>
+
+    <footer>
+      <span>Dati astronomici: NASA / Fred Espenak, GSFC</span>
+      <span id="localTime">—</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
