@@ -1,0 +1,12 @@
+/* Final composition fixes */
+.earth{width:min(355px,40%)}
+.alignment-card{right:-8px;top:auto;bottom:72px;width:190px}
+.alignment-card p{font-size:8.5px}
+@media(max-width:1100px){
+  .earth{width:min(340px,39%)}
+  .alignment-card{right:-4px;bottom:60px;width:185px}
+}
+@media(max-width:800px){
+  .earth{width:42%;min-width:0}
+  .alignment-card{right:50%;top:auto;bottom:6%;transform:translateX(50%);width:min(260px,72vw)}
+}
