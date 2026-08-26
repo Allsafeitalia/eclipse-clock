@@ -1,24 +1,34 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#05070c"><title>Eclipse Clock</title>
-<link rel="stylesheet" href="style.css?v=9"><link rel="stylesheet" href="footer.css?v=1"><link rel="stylesheet" href="motion-fix.css?v=1"><link rel="stylesheet" href="redesign.css?v=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030712">
+<title>Eclipse Clock</title>
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body data-theme="cosmic">
-<div class="stars"></div><div class="noise"></div>
-<main class="app">
-<aside class="sidebar">
-  <header class="brand"><span class="brand-mark">◉</span><div><span>E C L I P S E&nbsp; C L O C K</span><small>OSSERVA. CONTA. VIVI L'ECLISSI.</small></div></header>
-  <section class="next-card glass"><div class="eyebrow">PROSSIMA ECLISSI <span class="live-dot"></span></div><h1 id="nextTitle">—</h1><p class="meta" id="nextLocation">—</p><p class="meta" id="nextDate">—</p><div class="countdown"><div><strong id="years">00</strong><span>ANNI</span></div><div><strong id="months">00</strong><span>MESI</span></div><div><strong id="days">00</strong><span>GIORNI</span></div><div><strong id="hours">00</strong><span>ORE</span></div><div><strong id="minutes">00</strong><span>MINUTI</span></div><div><strong id="seconds">00</strong><span>SECONDI</span></div></div></section>
-  <section class="progress-card glass"><div class="row"><span>TEMPO CHE PASSA</span><strong id="progressValue">0.0%</strong></div><div class="progress"><i id="progressBar"></i></div><p id="progressLabel">In cammino verso l'eclissi…</p></section>
-  <section class="upcoming"><div class="section-label">PROSSIME ECLISSI</div><div id="sidebarEvents"></div><button id="calendarBtn" class="calendar-btn">▣ &nbsp; VEDI CALENDARIO COMPLETO <span>›</span></button></section>
-</aside>
-<section class="main-view">
-<header class="toolbar"><div class="clock-pill">✦ &nbsp; ORA ATTUALE &nbsp; <b id="localTime">—</b></div><div class="toolbar-actions"><button id="shareBtn">⌯ &nbsp; Condividi</button><div class="themes"><button class="active" data-theme="cosmic">COSMIC</button><button data-theme="neon">NEON</button><button data-theme="minimal">MINIMAL</button></div></div></header>
-<div class="orbit-stage"><div class="orbit-scene"><div class="orbit-halo"></div><div class="earth"><div class="continents"></div><div class="night-lights"></div><div class="clouds"></div><div class="earth-glow"></div></div><div class="orbit-ring"><div class="orbit-progress" id="orbitProgress"></div></div><div class="sun-orbit" id="sunOrbit"><div class="sun-dot">☼</div></div><div class="moon-orbit" id="moonOrbit"><div class="moon"><span></span></div></div><div class="axis-line" id="axisLine"></div><div class="eclipse-marker"><div class="eclipse-icon"></div><span id="markerDate">—</span><strong id="markerKind">ECLISSI</strong></div><div class="journey-label"><strong id="journeyValue">0.0%</strong><span>DEL PERCORSO</span></div><div class="alignment-card glass" id="alignmentCard"><div class="alignment-icon">◒</div><div><span>ALLINEAMENTO</span><strong id="alignmentStatus">IN CORSO</strong><p id="alignmentText">Terra, Sole e Luna si stanno allineando.</p></div></div></div></div>
-<section class="fact glass"><div class="fact-icon">♧</div><div><b>LO SAPEVI?</b><p>Un'eclissi avviene quando Sole, Terra e Luna raggiungono la geometria necessaria. Qui l'animazione segue la percentuale del viaggio e arriva all'allineamento nell'istante dell'eclissi.</p></div></section>
-<footer class="site-footer">Made with <span>♥</span> by <strong>Giuseppe Mastronardi</strong></footer>
-</section></main>
+<div class="stars"></div><div class="nebula nebula-a"></div><div class="nebula nebula-b"></div><div class="noise"></div>
+<main class="site">
+<header class="topbar">
+  <a class="logo" href="#"><span class="logo-orbit"><i></i></span><span>ECLIPSE <b>CLOCK</b></span></a>
+  <nav class="nav"><a class="active" href="#hero">◉ <span>PROSSIMA ECLISSI</span></a><a href="#calendar">▣ <span>CALENDARIO COMPLETO</span></a><a href="#info">ⓘ <span>INFORMAZIONI</span></a></nav>
+  <div class="top-actions"><div class="live-time">◷ <b id="localTime">—</b></div><button id="shareBtn" class="icon-btn">⌯</button><div class="themes"><button class="active" data-theme="cosmic">COSMIC</button><button data-theme="neon">NEON</button><button data-theme="minimal">MINIMAL</button></div></div>
+</header>
+<section id="hero" class="hero-layout">
+  <div class="hero-main">
+    <div class="event-chip"><span class="pulse"></span> PROSSIMA ECLISSI</div>
+    <div class="scene-copy"><span>L'ECLISSI INIZIERÀ TRA</span><div class="countdown"><div><strong id="days">00</strong><small>GIORNI</small></div><div><strong id="hours">00</strong><small>ORE</small></div><div><strong id="minutes">00</strong><small>MINUTI</small></div><div><strong id="seconds">00</strong><small>SECONDI</small></div></div></div>
+    <div class="orbit-stage"><div class="orbit-scene"><div class="orbit-glow"></div><div class="sun-orbit" id="sunOrbit"><div class="sun-dot"><span>☼</span></div><label>SOLE</label></div><div class="orbit-ring"><div class="orbit-progress" id="orbitProgress"></div></div><div class="earth"><div class="continents"></div><div class="night-lights"></div><div class="clouds"></div><div class="earth-glow"></div></div><div class="moon-orbit" id="moonOrbit"><div class="moon"><span></span></div><label>LUNA</label></div><div class="axis-line" id="axisLine"></div><div class="journey-label"><strong id="journeyValue">0.0%</strong><span>DEL PERCORSO</span></div><div class="eclipse-marker"><div class="eclipse-icon"></div><span id="markerDate">—</span><strong id="markerKind">ECLISSI</strong></div><div class="alignment-card glass"><div class="alignment-icon">◒</div><div><span>ALLINEAMENTO</span><strong id="alignmentStatus">IN CORSO</strong><p id="alignmentText">Sole, Terra e Luna si stanno allineando.</p></div></div></div></div>
+    <div class="event-title"><div><span class="eyebrow">EVENTO CELESTE</span><h1 id="nextTitle">—</h1><p id="nextDate">—</p></div><div class="location"><span>VISIBILE DA</span><strong id="nextLocation">—</strong></div></div>
+    <div class="event-details glass"><div><span class="detail-icon">◎</span><p><small>TIPO DI ECLISSI</small><b id="detailType">—</b></p></div><div><span class="detail-icon">⌖</span><p><small>VISIBILE DA</small><b id="detailVisibility">—</b></p></div><div><span class="detail-icon">◐</span><p><small>DURATA MASSIMA</small><b id="detailDuration">In arrivo</b></p></div><div><span class="detail-icon">◷</span><p><small>STATO</small><b id="detailStatus">IN CAMMINO</b></p></div></div>
+    <div class="progress-row"><span>TEMPO CHE PASSA</span><div class="progress"><i id="progressBar"></i></div><strong id="progressValue">0.0%</strong></div>
+  </div>
+  <aside id="calendar" class="calendar-panel glass"><header><div><span class="calendar-icon">▣</span><div><h2>CALENDARIO COMPLETO</h2><p>Tutte le prossime eclissi</p></div></div><button id="calendarBtn" class="expand">↗</button></header><div class="filters"><button class="filter active" data-filter="all">Tutte</button><button class="filter" data-filter="solar">Solari</button><button class="filter" data-filter="lunar">Lunari</button></div><div id="sidebarEvents" class="calendar-events"></div><button class="all-dates" id="calendarBtn2">Vedi tutte le date fino al 2040 <span>→</span></button></aside>
+</section>
+<section id="info" class="info-section"><div class="info-intro"><span class="eyebrow">ASTRONOMIA IN BREVE</span><h2>COS'È UN'ECLISSI?</h2><p>Un'eclissi si verifica quando Sole, Luna e Terra si allineano in modo tale che uno dei tre corpi celesti entra nell'ombra di un altro.</p><a href="#info">Scopri di più <span>→</span></a></div><article class="info-card"><div class="info-symbol sun-symbol">☼</div><h3>Eclissi solare</h3><p>La Luna si interpone tra il Sole e la Terra, proiettando la sua ombra sulla Terra.</p></article><article class="info-card"><div class="info-symbol moon-symbol">◐</div><h3>Eclissi lunare</h3><p>La Terra si interpone tra il Sole e la Luna, proiettando la sua ombra sulla Luna.</p></article><article class="info-card"><div class="info-symbol orbit-symbol">◌</div><h3>Allineamento</h3><p>La geometria tra i tre corpi determina il tipo di eclissi e il suo aspetto nel cielo.</p></article></section>
+<footer>Made with <span>♥</span> by <strong>Giuseppe Mastronardi</strong></footer>
+</main>
 <div id="calendarModal" class="modal" aria-hidden="true"><div class="modal-panel"><header class="modal-head"><div><span class="eyebrow">ARCHIVIO CELESTE</span><h2>Calendario eclissi</h2><p>Tutti gli eventi disponibili nel catalogo del sito.</p></div><button id="closeCalendar" class="close">×</button></header><div class="filters"><button class="filter active" data-filter="all">TUTTE</button><button class="filter" data-filter="solar">SOLARI</button><button class="filter" data-filter="lunar">LUNARI</button></div><div id="calendarList" class="calendar-list"></div></div></div>
-<script src="app.js?v=9" defer></script><script src="alignment.js?v=2" defer></script><script src="precision.js?v=4" defer></script>
+<script src="app.js?v=10" defer></script><script src="alignment.js?v=3" defer></script><script src="precision.js?v=5" defer></script>
 </body></html>
