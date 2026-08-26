@@ -1,5 +1,4 @@
 :root{--bg:#02050b;--panel:#050b14;--blue:#73a9ff;--gold:#ffc84f;--green:#63dda0;--muted:#8d98a8;--line:rgba(160,190,230,.14)}
-/* Final visual direction: Earth is the hero, with visible continents and generous space around Moon/card. */
 body{background:#02050b!important;color:#f5f7fb!important}
 .topbar{height:76px;background:rgba(1,5,12,.9)!important;border-bottom:1px solid var(--line)!important}
 .hero-layout{grid-template-columns:minmax(0,1fr) 390px!important;min-height:calc(100vh - 76px)!important}
@@ -11,50 +10,25 @@ body{background:#02050b!important;color:#f5f7fb!important}
 .countdown strong{font-size:43px!important;color:#f5f7fb!important;font-weight:500!important}
 .countdown small{font-size:9px!important}
 .event-title{position:absolute!important;top:28px;left:30px;right:30px;z-index:24;pointer-events:none!important;display:block!important;padding:0!important}
-.event-title>div:first-child{max-width:340px}
-.event-title .eyebrow{display:none}
-.event-title h1{margin:31px 0 6px!important;font-size:25px!important;line-height:1.1!important;letter-spacing:-.03em!important}
-.event-title p{font-size:11px!important;color:#aeb7c5!important}
-.event-title .location{display:none!important}
+.event-title>div:first-child{max-width:340px}.event-title .eyebrow{display:none}.event-title h1{margin:31px 0 6px!important;font-size:25px!important;line-height:1.1!important;letter-spacing:-.03em!important}.event-title p{font-size:11px!important;color:#aeb7c5!important}.event-title .location{display:none!important}
 .orbit-stage{height:560px!important;min-height:560px!important;margin-top:-5px}
 .orbit-scene{width:min(900px,75vw)!important;height:min(650px,62vw)!important;min-width:600px!important;min-height:560px!important}
 .earth{width:43%!important;z-index:8!important;background:radial-gradient(circle at 31% 26%,#c8e7ff 0,#5eacec 17%,#1d5a86 42%,#071827 69%,#01050a 100%)!important;box-shadow:inset -62px -25px 88px #000,inset 15px 0 38px rgba(110,200,255,.35),0 0 35px rgba(102,185,255,.45),0 0 90px rgba(62,145,222,.18)!important}
-/* Stylized geographic map: clearly recognizable continents instead of abstract blobs. */
-.continents{inset:0!important;opacity:.96!important;filter:none!important;transform:none!important;border-radius:50%;background-color:transparent!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='%237f9b61'%3E%3Cpath d='M150 160l55-38 70 7 44 39-12 35-48 14-31 38-43-16-22-35z'/%3E%3Cpath d='M306 270l48-28 42 18 16 43-25 37-14 57 23 57-25 52-39 18-22-44 7-53-27-42 14-50z'/%3E%3Cpath d='M397 170l62-21 68 16 47 42-18 29-45-8-29 28-51-7-25-29z'/%3E%3Cpath d='M505 254l72-8 75 38 34 50-29 26-57-11-35 24-44-29-12-40z'/%3E%3Cpath d='M622 470l53 18 20 38-29 28-48-11-20-34z'/%3E%3Cpath d='M550 565l56 15 30 36-18 39-46-6-39-33z'/%3E%3Cpath d='M240 470l39-15 31 28-12 43-37 31-30-31z'/%3E%3Cpath d='M130 515l48-12 33 26-7 44-38 22-45-20z'/%3E%3C/g%3E%3Cg fill='%23a7bb79' opacity='.8'%3E%3Cpath d='M365 225l45-18 31 15-8 27-38 12-29-14z'/%3E%3Cpath d='M444 292l49-12 35 28-17 29-42 8-30-23z'/%3E%3C/g%3E%3C/svg%3E");background-size:112% 112%;background-position:center 48%;mix-blend-mode:screen}
-/* Subtle atmosphere over the map */
-.earth:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(115deg,transparent 35%,rgba(0,0,0,.04) 45%,rgba(0,0,0,.68) 72%,rgba(0,0,0,.96) 100%);pointer-events:none;z-index:4}
-.night-lights{z-index:5!important;opacity:.68!important}
-.clouds{z-index:6!important;opacity:.24!important}
-.earth-glow{z-index:7!important}
-.orbit-ring{width:76%!important;height:76%!important;border:1px dashed rgba(235,240,248,.62)!important;z-index:2!important}
+.continents{inset:-1%!important;opacity:1!important;filter:none!important;transform:none!important;border-radius:50%;background-color:transparent!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 700'%3E%3Cg fill='%238baa6b'%3E%3Cpath d='M92 118l48-37 61 5 32 28 51 8 24 34-24 34-43 8-31 29-48-9-27-28-36-10-17-32z'/%3E%3Cpath d='M263 201l44-23 39 15 27 35-15 34 7 42-22 47-30 9-19 43-32-19 5-47-27-38 12-47z'/%3E%3Cpath d='M350 106l47-29 55 5 37 20 38-2 47 25 29 34-21 28-45-5-34 24-42-10-37 15-39-27z'/%3E%3Cpath d='M500 181l48-20 49 12 31 28 43 8 48 38-12 31-45 3-31 22-39-12-24-31-45-13-15-35z'/%3E%3Cpath d='M704 250l38-5 32 22 28 8 23 27-19 26-41-5-26-24-31-14z'/%3E%3Cpath d='M625 315l48 13 35 28 9 40-24 28-35-8-18-28-34-20z'/%3E%3Cpath d='M533 385l48 8 32 26 11 39-24 33-41-4-29-28-32-17z'/%3E%3Cpath d='M405 402l38 8 29 29-6 40-26 33-32-10-15-35 8-31z'/%3E%3Cpath d='M266 384l39-16 32 19 10 34-20 31-35 22-29-24 4-36z'/%3E%3Cpath d='M116 376l43-12 39 18 12 37-24 27-38 15-42-21-12-32z'/%3E%3C/g%3E%3Cg fill='%23b3c77f' opacity='.9'%3E%3Cpath d='M301 155l36-17 29 12 13 22-23 18-34-4z'/%3E%3Cpath d='M432 145l37-13 39 13 18 22-25 17-41-8z'/%3E%3Cpath d='M564 216l38-11 33 18 12 24-32 13-35-12z'/%3E%3C/g%3E%3Cg fill='%235f805b' opacity='.8'%3E%3Cpath d='M184 160l31-12 28 12-6 18-31 8z'/%3E%3Cpath d='M348 254l28-15 28 9 8 23-23 17-30-7z'/%3E%3Cpath d='M476 278l38-16 27 14 9 26-28 19-34-8z'/%3E%3C/g%3E%3C/svg%3E");background-size:118% 118%;background-position:center 49%;mix-blend-mode:screen}
+.earth:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(112deg,transparent 31%,rgba(0,0,0,.04) 43%,rgba(0,0,0,.55) 67%,rgba(0,0,0,.96) 100%);pointer-events:none;z-index:4}
+.night-lights{z-index:5!important;opacity:.6!important}.clouds{z-index:6!important;opacity:.2!important}.earth-glow{z-index:7!important}
+/* The dashed orbit is the reference path. Sun and Moon share the exact same 76% orbit. */
+.orbit-ring,.moon-orbit,.sun-orbit{width:76%!important;height:76%!important}
+.orbit-ring{border:1px dashed rgba(235,240,248,.68)!important;z-index:2!important}
+.orbit-ring:before{border-color:rgba(255,255,255,.06)!important}
 .orbit-progress{border:0!important;background:conic-gradient(from 215deg,transparent 0deg,transparent 265deg,rgba(115,169,255,.9) 265deg,rgba(115,169,255,.9) 278deg,transparent 278deg,transparent 360deg)!important;filter:drop-shadow(0 0 5px rgba(115,169,255,.65))!important}
-.sun-orbit{width:76%!important;height:76%!important;z-index:9!important}
-.sun-dot{width:88px!important;height:88px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:radial-gradient(circle at 38% 34%,#fffbd1 0,#ffd84d 20%,#ff9c18 57%,#ff5d0d 100%)!important;font-size:38px!important;box-shadow:0 0 28px #ffbd3d,0 0 78px rgba(255,139,22,.65)!important}
-.moon-orbit{width:76%!important;height:76%!important;z-index:12!important}
-.moon{width:52px!important;height:52px!important;top:-26px!important}
-.axis-line{width:76%!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent)!important}
-.journey-label{top:0!important}
-.journey-label strong{color:var(--blue)!important;font-size:24px!important}
-.eclipse-marker{bottom:-1px!important}
-.eclipse-icon{width:42px!important;height:42px!important}
+.sun-orbit{z-index:9!important}.sun-dot{width:88px!important;height:88px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:radial-gradient(circle at 38% 34%,#fffbd1 0,#ffd84d 20%,#ff9c18 57%,#ff5d0d 100%)!important;font-size:38px!important;box-shadow:0 0 28px #ffbd3d,0 0 78px rgba(255,139,22,.65)!important}
+.moon-orbit{z-index:12!important;transition:transform .6s linear}.moon{width:52px!important;height:52px!important;top:-26px!important}
+.axis-line{width:76%!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent)!important}.journey-label{top:0!important}.journey-label strong{color:var(--blue)!important;font-size:24px!important}.eclipse-marker{bottom:-1px!important}.eclipse-icon{width:42px!important;height:42px!important}
 .alignment-card{right:-2%!important;top:auto!important;bottom:55px!important;transform:none!important;width:205px!important;padding:14px!important;z-index:18!important}
-.calendar-panel{padding:25px 18px!important;background:linear-gradient(180deg,rgba(3,8,16,.97),rgba(2,6,13,.9))!important}
-.calendar-events{max-height:calc(100vh - 250px)!important;overflow:auto!important;padding-right:3px}
-.event-mini{grid-template-columns:58px 1fr 42px 18px!important;min-height:78px!important;padding:11px 9px!important;border:1px solid rgba(130,160,200,.11)!important;border-radius:13px!important;cursor:pointer!important}
-.event-mini:hover{border-color:rgba(115,169,255,.4)!important;background:rgba(115,169,255,.06)!important}
-.event-mini:first-child{border-left:3px solid var(--blue)!important}
-.event-thumb{width:36px;height:36px;border-radius:50%;position:relative;justify-self:end}
-.event-thumb.solar{background:radial-gradient(circle,#111 0 45%,#ffc84f 47% 52%,#fff1a4 55%,#ff9d1b 64%,transparent 67%);box-shadow:0 0 15px rgba(255,190,60,.25)}
-.event-thumb.lunar{background:radial-gradient(circle at 35% 30%,#eee 0,#9b9da0 28%,#50545a 63%,#171b20 100%);box-shadow:0 0 12px rgba(200,215,235,.18)}
-.event-thumb.lunar.total{background:radial-gradient(circle at 38% 35%,#c96b3b 0,#8b3826 35%,#31151a 70%,#090c12 100%);box-shadow:0 0 15px rgba(190,70,45,.25)}
-.event-mini .date{color:#e6edf8!important}
-.event-mini h3{font-size:10px!important}
-.event-mini p{font-size:8px!important}
-/* Modal: full archive remains easy to browse. */
-.calendar-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-.calendar-item{cursor:pointer!important}
-.calendar-item:hover{border-color:rgba(115,169,255,.4)!important;background:rgba(115,169,255,.06)!important}
-.calendar-item .event-thumb{grid-column:3;grid-row:1 / span 2}
+.calendar-panel{padding:25px 18px!important;background:linear-gradient(180deg,rgba(3,8,16,.97),rgba(2,6,13,.9))!important}.calendar-events{max-height:calc(100vh - 250px)!important;overflow:auto!important;padding-right:3px}
+.event-mini{grid-template-columns:58px 1fr 42px 18px!important;min-height:78px!important;padding:11px 9px!important;border:1px solid rgba(130,160,200,.11)!important;border-radius:13px!important;cursor:pointer!important}.event-mini:hover{border-color:rgba(115,169,255,.4)!important;background:rgba(115,169,255,.06)!important}.event-mini:first-child{border-left:3px solid var(--blue)!important}.event-thumb{width:36px;height:36px;border-radius:50%;position:relative;justify-self:end}.event-thumb.solar{background:radial-gradient(circle,#111 0 45%,#ffc84f 47% 52%,#fff1a4 55%,#ff9d1b 64%,transparent 67%);box-shadow:0 0 15px rgba(255,190,60,.25)}.event-thumb.lunar{background:radial-gradient(circle at 35% 30%,#eee 0,#9b9da0 28%,#50545a 63%,#171b20 100%);box-shadow:0 0 12px rgba(200,215,235,.18)}.event-thumb.lunar.total{background:radial-gradient(circle at 38% 35%,#c96b3b 0,#8b3826 35%,#31151a 70%,#090c12 100%);box-shadow:0 0 15px rgba(190,70,45,.25)}.event-mini .date{color:#e6edf8!important}.event-mini h3{font-size:10px!important}.event-mini p{font-size:8px!important}
+.calendar-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}.calendar-item{cursor:pointer!important}.calendar-item:hover{border-color:rgba(115,169,255,.4)!important;background:rgba(115,169,255,.06)!important}.calendar-item .event-thumb{grid-column:3;grid-row:1 / span 2}
 @media(max-width:1100px){.hero-layout{grid-template-columns:350px minmax(0,1fr)!important}.orbit-scene{width:min(760px,72vw)!important}.earth{width:43%!important}.alignment-card{right:-4%!important;bottom:52px!important}}
 @media(max-width:800px){.hero-layout{display:block!important}.hero-main{min-height:900px}.event-title{position:relative!important;top:auto;left:auto;right:auto;margin:18px 0 -30px!important}.event-title h1{margin:8px 0 4px!important}.scene-copy{margin-top:42px!important}.orbit-stage{height:590px!important;min-height:590px!important}.orbit-scene{width:100vw!important;height:100vw!important;min-width:430px!important;min-height:430px!important}.earth{width:48%!important}.alignment-card{right:3%!important;bottom:40px!important;width:185px!important}.calendar-panel{border-left:0;border-top:1px solid var(--line)!important}.calendar-events{max-height:none!important}.event-mini{grid-template-columns:58px 1fr 42px 18px!important}}
-@media(max-width:520px){.hero-main{min-height:820px}.countdown{gap:16px!important}.countdown strong{font-size:30px!important}.orbit-stage{height:500px!important;min-height:500px!important}.orbit-scene{width:100vw!important;height:100vw!important;min-width:350px!important;min-height:350px!important}.earth{width:49%!important}.sun-dot{width:62px!important;height:62px!important;font-size:28px!important}.moon{width:38px!important;height:38px!important;top:-19px!important}.alignment-card{right:50%!important;bottom:18px!important;transform:translateX(50%)!important;width:min(280px,78vw)!important}.calendar-list{grid-template-columns:1fr!important}}
+@media(max-width:520px){.hero-main{min-height:820px}.countdown{gap:16px!important}.countdown strong{font-size:30px!important}.orbit-stage{height:500px!important;min-height:500px!important}.orbit-scene{width:100vw!important;height:100vw!important;min-width:350px!important;min-height:350px!important}.earth{width:49%!important}.sun-dot{width:62px!important;height:62px!important;font-size:28px!important}.moon{width:38px!important;height:38px!important;top:-19px!important}.alignment-card{right:50%!important;bottom:18px!important;transform:translateX(50%)!important}.calendar-list{grid-template-columns:1fr!important}}
