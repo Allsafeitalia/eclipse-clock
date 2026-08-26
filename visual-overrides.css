@@ -1,0 +1,21 @@
+:root{--blue:#6f9cff;--blue2:#9fc0ff;--gold:#ffc84d;--green:#61e6a1;--line:rgba(155,180,220,.16)}
+body{background:#01050c}
+.stars{opacity:.9;background-size:90px 90px,170px 170px}
+.topbar{height:76px;padding:0 30px;background:rgba(1,5,12,.82)}
+.hero-layout{grid-template-columns:minmax(0,1fr) 410px;min-height:calc(100vh - 76px)}
+.hero-main{padding:28px 34px 24px;background:radial-gradient(circle at 48% 48%,rgba(34,82,132,.22),transparent 48%)}
+.scene-copy{margin-top:42px}.countdown{gap:38px}.countdown strong{font-size:46px;color:#f6f8fc}
+.orbit-stage{height:590px}.orbit-scene{width:min(900px,82vw);height:min(590px,58vw);min-height:510px}
+.earth{width:min(440px,44%);box-shadow:inset -70px -20px 100px #000,inset 16px 0 38px rgba(120,205,255,.3),0 0 48px rgba(80,166,255,.5)}
+.orbit-ring{width:84%;height:84%;border:1px dashed rgba(224,231,242,.55)}
+.orbit-progress{border:0;inset:-1px;background:repeating-conic-gradient(from -55deg,rgba(127,164,235,.9) 0deg 2deg,transparent 2deg 8deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));filter:drop-shadow(0 0 5px rgba(120,160,255,.5));transform:none!important}
+.sun-orbit,.moon-orbit{width:84%;height:84%}.sun-dot{width:108px;height:108px;top:-54px}.moon{width:66px;height:66px;top:-33px}
+.axis-line{width:84%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent)}
+.journey-label{top:8px}.alignment-card{right:-1%;top:58%;width:235px}
+.event-title{max-width:1040px}.event-details,.progress-row{max-width:1040px}
+.calendar-panel{padding:26px 18px 22px;overflow:hidden}.calendar-events{max-height:calc(100vh - 310px);overflow:auto;padding-right:3px;scrollbar-width:thin}.event-mini{cursor:pointer;transition:.2s}.event-mini:hover{border-color:rgba(111,156,255,.45);background:rgba(111,156,255,.08);transform:translateX(-2px)}
+.all-dates{text-align:left;transition:.2s}.all-dates:hover{border-color:rgba(111,156,255,.45);background:rgba(111,156,255,.08)}
+.modal{backdrop-filter:blur(12px)}.modal-panel{max-height:90vh;background:linear-gradient(145deg,rgba(4,10,20,.98),rgba(1,5,12,.98));box-shadow:0 30px 100px rgba(0,0,0,.65)}.calendar-list{max-height:65vh;overflow:auto}.calendar-item{cursor:pointer;transition:.2s}.calendar-item:hover{border-color:rgba(111,156,255,.45);background:rgba(111,156,255,.07)}
+@media(max-width:1100px){.hero-layout{grid-template-columns:minmax(0,1fr) 350px}.orbit-scene{width:min(760px,82vw);height:560px}.alignment-card{right:-3%;width:205px}}
+@media(max-width:850px){.hero-layout{display:block}.calendar-panel{border-left:0;border-top:1px solid var(--line)}.calendar-events{max-height:420px}.orbit-stage{height:540px}.orbit-scene{width:min(92vw,680px);height:540px}.sun-orbit,.moon-orbit,.orbit-ring{width:78%;height:78%}.earth{width:44%}.info-section{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.topbar{height:auto;min-height:72px;padding:12px 16px;flex-wrap:wrap}.nav{order:3;width:100%;height:42px;gap:18px}.nav a{font-size:10px}.top-actions{margin-left:auto}.live-time{display:none}.hero-main{padding:20px 14px}.scene-copy{margin-top:30px}.countdown{gap:14px}.countdown strong{font-size:31px}.orbit-stage{height:440px}.orbit-scene{width:100%;height:440px;min-height:0}.earth{width:45%}.sun-dot{width:76px;height:76px;top:-38px;font-size:34px}.moon{width:48px;height:48px;top:-24px}.alignment-card{right:50%;top:auto;bottom:3%;transform:translateX(50%);width:245px}.event-details{grid-template-columns:1fr 1fr}.event-details>div{border-bottom:1px solid var(--line)}.info-section{grid-template-columns:1fr}.location{display:none}}
