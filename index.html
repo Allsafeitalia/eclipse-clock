@@ -3,60 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#05050a" />
+  <meta name="theme-color" content="#03050a" />
   <title>Eclipse Clock — Il tempo verso la prossima eclissi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-theme="cosmic">
   <div class="stars"></div>
   <main class="app">
-    <header class="topbar">
-      <div class="brand"><span class="brand-mark">◐</span><span>ECLIPSE CLOCK</span></div>
-      <div class="controls">
-        <button class="theme-btn" data-theme="cosmic">Cosmic</button>
-        <button class="theme-btn" data-theme="neon">Neon</button>
-        <button class="theme-btn" data-theme="minimal">Minimal</button>
-      </div>
-    </header>
+    <aside class="sidebar">
+      <header class="brand"><span class="brand-mark">◐</span><span>E C L I P S E&nbsp; C L O C K</span></header>
 
-    <section class="hero">
-      <div class="hero-copy">
+      <section class="next-card glass">
         <p class="eyebrow">PROSSIMA ECLISSI</p>
         <h1 id="nextTitle">Caricamento…</h1>
-        <p class="location" id="nextDate">—</p>
-        <div class="countdown" id="countdown">
-          <div><strong id="days">00</strong><span>giorni</span></div>
-          <div><strong id="hours">00</strong><span>ore</span></div>
-          <div><strong id="minutes">00</strong><span>min</span></div>
-          <div><strong id="seconds">00</strong><span>sec</span></div>
+        <p class="meta" id="nextLocation">Dati in caricamento</p>
+        <p class="meta" id="nextDate">—</p>
+        <div class="countdown" aria-label="Conto alla rovescia">
+          <div><strong id="years">00</strong><span>ANNI</span></div>
+          <div><strong id="months">00</strong><span>MESI</span></div>
+          <div><strong id="days">00</strong><span>GIORNI</span></div>
+          <div><strong id="hours">00</strong><span>ORE</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTI</span></div>
+          <div><strong id="seconds">00</strong><span>SECONDI</span></div>
         </div>
-      </div>
-      <div class="eclipse-stage" aria-label="Animazione eclissi">
-        <div class="sun-glow"></div>
-        <div class="sun"></div>
-        <div class="moon"></div>
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel">
-      <div class="section-head">
-        <div><p class="eyebrow">CALENDARIO</p><h2>Eclissi future</h2></div>
-        <div class="filters">
-          <button class="filter active" data-filter="all">Tutte</button>
-          <button class="filter" data-filter="solar">Solari</button>
-          <button class="filter" data-filter="lunar">Lunari</button>
+      <section class="progress-card glass">
+        <div class="row"><span>TEMPO CHE PASSA</span><strong id="progressValue">0%</strong></div>
+        <div class="progress"><i id="progressBar"></i></div>
+        <p id="progressLabel">In cammino verso l'eclissi…</p>
+      </section>
+
+      <section class="upcoming">
+        <div class="section-label">◧ &nbsp; PROSSIME ECLISSI</div>
+        <div id="sidebarEvents"></div>
+        <button id="calendarBtn" class="calendar-btn">▣ &nbsp; CALENDARIO COMPLETO <span>›</span></button>
+      </section>
+    </aside>
+
+    <section class="main-view">
+      <header class="toolbar">
+        <div class="clock-pill">✦ &nbsp; ORA ATTUALE &nbsp; <span id="localTime">—</span></div>
+        <div class="toolbar-actions">
+          <button id="shareBtn">⌯ &nbsp; Condividi</button>
+          <div class="segmented"><button class="active">°C</button><button>°F</button></div>
+          <div class="themes"><button class="active" data-theme="cosmic">◉</button><button data-theme="neon">✦</button><button data-theme="minimal">○</button></div>
         </div>
-      </div>
-      <div id="timeline" class="timeline"></div>
-      <button id="loadMore" class="load-more">Carica altri anni</button>
-    </section>
+      </header>
 
-    <footer>
-      <span>Dati astronomici: NASA / Fred Espenak, GSFC</span>
-      <span id="localTime">—</span>
-    </footer>
+      <div class="orbit-scene">
+        <div class="earth-shadow"></div>
+        <div class="earth">
+          <div class="continents"></div>
+          <div class="night-lights"></div>
+          <div class="earth-glow"></div>
+        </div>
+        <div class="orbit-ring"><div class="orbit-dash"></div><div class="orbit-progress" id="orbitProgress"></div></div>
+        <div class="sun-orbit" id="sunOrbit"><div class="sun-dot">☼</div></div>
+        <div class="eclipse-marker" id="eclipseMarker"><div class="eclipse-icon">●</div><span id="markerDate">—</span><strong id="markerKind">ECLISSI</strong></div>
+        <div class="journey-label"><strong id="journeyValue">0%</strong><span>DEL PERCORSO</span></div>
+      </div>
+
+      <section class="fact glass"><div class="bulb">♧</div><div><strong>LO SAPEVI?</strong><p>Un'eclissi solare totale è visibile solo in una fascia stretta della Terra. Il countdown e l'orbita avanzano lentamente insieme fino all'istante dell'eclissi.</p></div></section>
+    </section>
   </main>
   <script src="app.js"></script>
 </body>
