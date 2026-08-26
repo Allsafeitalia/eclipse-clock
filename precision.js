@@ -6,8 +6,8 @@
       const span = eval('progressSpan');
       if (!active || !start || !span) return;
       const now = Date.now();
-      const pct = Math.min(99.999, Math.max(0, ((now - start.getTime()) / span) * 100));
-      const value = `${pct.toFixed(3)}%`;
+      const pct = Math.min(99.9, Math.max(0, ((now - start.getTime()) / span) * 100));
+      const value = `${pct.toFixed(1)}%`;
       const progressValue = document.getElementById('progressValue');
       const journeyValue = document.getElementById('journeyValue');
       if (progressValue) progressValue.textContent = value;
